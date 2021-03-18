@@ -1,0 +1,394 @@
+:root {
+    --main-color :#31376b;
+    --main-color2: 49, 55, 107; /*couleur en décimal*/
+    --second-color: #a7acfe;
+    --police-chelou :Tahoma, Geneva, Kalimati, sans-serif;
+}
+body {
+    font-family: Calibri, Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    width: 60vw;
+    margin: auto;
+    background-color: #ccc;
+    padding: 0;
+}
+main {
+    background-color: #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--police-chelou);
+}
+article h2 {
+    font-size: 1.2em;
+}
+/**menu navigation **/
+nav {
+    background-color: rgba(var(--main-color2), 0.5);
+}
+nav ul {
+    margin: 0;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /** permet d'autorisé les éléments a passé à la ligne si la fenêtre se rétrécie **/
+}
+nav ul li {
+    list-style: none;
+    width: auto;
+    flex-wrap: wrap; /** permet d'autorisé les éléments a passé à la ligne si la fenêtre se rétrécie **/
+}
+nav ul li i {
+    vertical-align: sub;
+}
+/** Mise en flotant des élément inférieur à celui ciblé **/
+.colonneFlex {
+    display: flex;
+    flex-wrap: wrap; /** permet d'autorisé les éléments a passé à la ligne si la fenêtre se rétrécie **/
+}
+/** Largeur de la colonne de gauche **/
+#colgauche {
+    width: 13vw;
+    background-color: var(--second-color);
+    padding: 1vw
+}
+#colgauche h3 {
+    font-size: 0.8em;
+    font-weight: bold;
+}
+#img-outils {
+   margin: auto;
+   display: block;
+}
+/** Colonne droite style général **/
+#coldroite {
+    width: 43vw;
+    padding: 1vw;
+}
+/** Le bandeau **/
+header {
+    background-color: var(--main-color);
+    color : #fff;
+}
+#header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+#blabla p {
+    margin: 2em;
+}
+#gridheader-item1 {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    margin: 2em;
+}
+#gridheader-item1 {
+    text-align: center;
+}
+#gridheader-item2 {
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    margin: 1em;
+    text-align: justify;
+}
+#gridheader-item3 {
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    grid-column-start: 1;
+    grid-column-end: span 4;
+    grid-row-start: 2;
+    flex-wrap: wrap; /** permet d'autorisé les éléments a passé à la ligne si la fenêtre se rétrécie **/
+    align-items: center;
+}
+/** fin bandeau **/
+/** Contenu principal haut **/
+#programmation-skill, #cm-skill {
+    width: 50%;
+}
+/** contenu principal bas**/
+#epgrid1, #epgrid2, #epgrid3, #epgrid4 {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: auto auto;
+    padding: 0 1em 0 0;
+}
+#ep11, #ep21, #ep31, #ep41 {
+    grid-column-start: 1;
+    grid-row-start: 1;
+    grid-row-end: span 2;
+    text-align: center;
+    margin: auto;
+}
+#ep11>strong, #ep21>strong, #ep31>strong, #ep41>strong {
+    background-color: var(--main-color);
+    color: #fff;
+    border-radius: 0.2em;
+    padding: 0.3em;
+}
+#ep12, #ep22, #ep32, #ep42 {
+    grid-column-start: 2;
+    grid-column-end: span 3;
+}
+#ep13, #ep23, #ep33, #ep43 {
+    grid-column-start: 2;
+    grid-column-end: span 3;
+    text-align: justify;
+}
+#epgrid1, #epgrid3{
+    background-color: #eee;
+}
+
+footer {
+    background-color:var(--main-color);
+    color : #fff;
+    text-align: center;
+}
+/** animation des skills **/
+#skill-box {
+    font-size: 0.8em;
+    font-family: var(--police-chelou);
+    width: 95%;
+    height: 1.9em;
+    margin: 0.1em;
+    background-color: #eee;
+    border-radius:0.3em;
+    border: 10em #fff;
+}
+.skill-area {
+    float: left;
+    padding-left: 0.5em;
+}
+.percent-text {
+    float: right;
+    padding-right: 0.5em;
+}
+/** html **/
+#skill-html {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-html;
+    background-color: var(--main-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 100%;
+    color: #fff;
+}
+@keyframes Animate-html {
+        from {
+        width: 20%;
+    }
+    to {
+        width: 100%;
+    }
+}
+/** css **/
+#skill-css {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-css;
+    background-color: var(--second-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 80%;
+}
+@keyframes Animate-css {
+        from {
+        width: 20%;
+    }
+    to {
+        width: 80%;
+    }
+}
+/** javascript **/
+#skill-javascript {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-javascript;
+    background-color: var(--main-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 30%;
+    color: #fff;
+}
+@keyframes Animate-javascript {
+        from {
+        width: 25%;
+    }
+    to {
+        width: 30%;
+    }
+}
+/** php **/
+#skill-php {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-php;
+    background-color: var(--second-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 70%;
+}
+@keyframes Animate-php {
+        from {
+        width: 20%;
+    }
+    to {
+        width: 70%;
+    }
+}
+/** mysql **/
+#skill-mysql {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-mysql;
+    background-color:var(--main-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 70%;
+    color: #fff;
+}
+@keyframes Animate-mysql {
+        from {
+        width: 20%;
+    }
+    to {
+        width: 70%;
+    }
+}
+/** seo-sea **/
+#skill-seo-sea {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-seo-sea;
+    background-color: var(--second-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 90%;
+}
+@keyframes Animate-seo-sea {
+        from {
+        width: 35%;
+    }
+    to {
+        width: 90%;
+    }
+}
+/** analyse **/
+#skill-analyse {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-analyse;
+    background-color: var(--main-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 90%;
+    color: #fff;
+}
+@keyframes Animate-analyse {
+        from {
+        width: 50%;
+    }
+    to {
+        width: 90%;
+    }
+}
+/** e-reputation **/
+#skill-e-reputation {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-e-reputation;
+    background-color:var(--second-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 90%;
+}
+@keyframes Animate-e-reputation {
+        from {
+        width: 40%;
+    }
+    to {
+        width: 90%;
+    }
+}
+/** ligne-editoriale **/
+#skill-ligne-editoriale {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-ligne-editoriale;
+    background-color:var(--main-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 80%;
+    color: #fff;
+}
+@keyframes Animate-ligne-editoriale {
+        from {
+        width: 40%;
+    }
+    to {
+        width: 80%;
+    }
+}
+/** contenus **/
+#skill-contenus {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-contenus;
+    background-color: var(--second-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 90%;
+}
+@keyframes Animate-contenus {
+        from {
+        width: 40%;
+    }
+    to {
+        width: 90%;
+    }
+}
+/** animation **/
+#skill-animation {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-animation;
+    background-color: var(--main-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 70%;
+    color: #fff;
+}
+@keyframes Animate-animation {
+        from {
+        width: 45%;
+    }
+    to {
+        width: 70%;
+    }
+}
+/** veille **/
+#skill-veille {
+    animation-duration: 2s;
+    height: 1em;
+    animation-name: Animate-veille;
+    background-color: var(--second-color);
+    padding: 0.3em 0 0.6em 0;
+    border-radius:0.3em;
+    width: 90%;
+}
+@keyframes Animate-veille {
+        from {
+        width: 40%;
+    }
+    to {
+        width: 90%;
+    }
+}
+
+
