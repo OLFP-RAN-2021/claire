@@ -25,6 +25,15 @@ article h2 {
 nav {
     background-color: rgba(var(--main-color2), 0.5);
 }
+nav a, a:hover, a:visited {
+    color: #000;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+nav li:hover i {
+    transform: rotate(45deg);
+    transition : all .4s ease-out;
+}
 nav ul {
     margin: 0;
     padding: 1em;
@@ -93,8 +102,15 @@ header {
     grid-column-end: span 3;
     grid-row-start: 1;
     grid-row-end: span 1;
-    margin: 1em;
+    margin: 1em 2em 1em 1em;
     text-align: justify;
+    font-size: 1.1em;
+}
+#gridheader-item2 a {
+    color: #fff;
+}
+#gridheader-item2 a:visited {
+    color: #fff;
 }
 #gridheader-item3 {
     justify-content: space-around;
