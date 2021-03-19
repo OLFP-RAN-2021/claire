@@ -48,7 +48,7 @@ nav ul li {
     flex-wrap: wrap; /** permet d'autorisé les éléments a passé à la ligne si la fenêtre se rétrécie **/
 }
 nav ul li i {
-    vertical-align: sub;
+    vertical-align: bottom;
 }
 /** Mise en flotant des élément inférieur à celui ciblé **/
 .colonneFlex {
@@ -406,5 +406,30 @@ footer {
         width: 90%;
     }
 }
-
+/** pages réalisations **/
+.item-rea {
+    width: 46%;
+    padding: 2%;
+    text-align: justify;
+    align-self: center;
+}
+.item-rea img {
+    width: 100%;
+}
+.img-rea-impaire {
+    border-radius: 0em 3em 0em 3em;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+}
+.img-rea-paire {
+    border-radius: 3em 0em 3em 0em;
+    filter: drop-shadow(0 0 0.75rem rgba(0, 0, 0, 0.3));
+}
+#realisations-pro img {
+    width: 98%;
+    padding: 1%;
+}
+#NT {
+    background-color: #eee;
+    padding: 1em;
+}
 
